@@ -1,0 +1,12 @@
+<h1>Result and Score</h1>
+
+<% if @included && @english %>
+  <p>Congrats, <strong><%= @input %></strong> is a valid English word</p>
+<% elsif !@english && @included %>
+  <p>Sorry, <strong><%= @input %></strong> isn't a valid English word</P>
+<% else %>
+  <p>Sorry, <strong><%= @input %></strong> can't be built out of <%= @letters%></p>
+<%end %>
+
+
+<%= link_to "new", new_path %>
